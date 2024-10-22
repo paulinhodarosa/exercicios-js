@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio #3</title>
+</head>
+<body>
+    <hr>
+    <form>
+        <p>Crie um vetor de números e utilize um loop para calcular a soma de todos os elementos do vetor. <br>
+             Em seguida, imprima o resultado.</p>
+        <h3>
+            <input type="submit" value="Resolução">
+        </h3>
+
+    </form>
+    <script>
+        const ex3 = document.querySelector("form");
+        ex3.addEventListener("submit", (e) => {
+            e.preventDefault(); //evita o envio do formulário
+            let vetor = new Array(10);
+            vetor = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            console.log(vetor);
+            console.log(vetor.reduce((acc, curr) => acc + curr, 0));
+        });
+    </script>
+</body>
+</html>

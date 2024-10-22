@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio #2</title>
+</head>
+<body>
+    <hr>
+    <form>
+        <p>Escreva um programa que solicite ao usuário um número inteiro positivo e, em seguida, <br>
+             use um loop para imprimir uma contagem regressiva de 10 até esse número, parando se o número for menor que 10..</p>
+        <h3>
+            Informe um número inteiro: <input type="text" id="n1"> <br>
+            <input type="submit" value="Resolução">
+        </h3>
+
+    </form>
+    <script>
+        const ex2 = document.querySelector("form");
+        ex2.addEventListener("submit", (e) => {
+            e.preventDefault(); //evita o envio do formulário
+            let num = Number(ex2.n1.value);
+            if (num < 10) {
+                console.error("Programa encerrado! Escreva um número maior ou igual a 10.");
+                return;
+            }
+            for (let i = num; i >= 10; i--) {
+                console.log(i);
+            }
+
+        });
+    </script>
+</body>
+</html>
