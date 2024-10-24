@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio #5</title>
+</head>
+<body>
+    <hr>
+    <form>
+        <p>Crie um vetor com 10 números inteiros. <br>
+             Use uma estrutura condicional e um loop para verificar e imprimir quais desses números são primos.</p>
+        <h3>
+            <input type="submit" value="Resolução">
+        </h3>
+
+    </form>
+    <script>
+        const ex4 = document.querySelector("form");
+        ex4.addEventListener("submit", (e) => {
+            e.preventDefault(); //evita o envio do formulário
+            let vetor = new Array(10);
+            vetor = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            for (let i = 0; i < vetor.length; i++) {
+                let primo = true;
+                if (vetor[i] < 2) {
+                    primo = false;
+                } else {
+                    for (let j = 2; j <= Math.sqrt(vetor[i]); j++) {
+                        if (vetor[i] % j === 0) {
+                            primo = false;
+                            break;
+                        }
+                    }
+                }
+                    if (primo) {
+                    console.log(vetor[i]);
+                }
+            }
+            
+        });
+    </script>
+</body>
+</html>

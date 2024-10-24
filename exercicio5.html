@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio #5</title>
+</head>
+<body>
+    <hr>
+    <form>
+        <p>Crie um vetor que armazena a nota de 5 alunos. <br>
+            Depois, use um loop para calcular a média dessas notas e imprima se a média é maior ou igual a 7 (aprovado) ou menor (reprovado).</p>
+        <h3>
+            <input type="submit" value="Resolução">
+        </h3>
+
+    </form>
+    <script>
+        const ex5 = document.querySelector("form");
+        ex5.addEventListener("submit", (e) => {
+            e.preventDefault(); //evita o envio do formulário
+            let notas = new Array(5);
+            notas = [8, 6.5, 7, 5.5, 9];
+            let soma = 0;
+            
+            // Loop para calcular a soma das notas
+            for (let i = 0; i < notas.length; i++) {
+                soma += notas[i];
+            }
+            
+            // Cálculo da média
+            let media = soma / notas.length;
+    
+            // Verificação da média e impressão do resultado
+            if (media >= 7) {
+                console.log("Média: " + media.toFixed(2) + " - Aprovado");
+            } else {
+                console.log("Média: " + media.toFixed(2) + " - Reprovado");
+            }
+            
+        });
+    </script>
+</body>
+</html>
